@@ -24,7 +24,7 @@ jobs:
         
       - name: build the application 
         run: |
-          mvm clean
-          mvm -B  package --file pom.xl    
+          mvn clean
+          mvm -B  package --file pom.mxl    
 
         
