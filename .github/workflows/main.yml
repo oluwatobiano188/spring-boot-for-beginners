@@ -19,9 +19,8 @@ jobs:
           distribution: 'temurin' 
           java-version: 17
           
-      - name: unit test
-        uses: mvn -B test --file pom.xml
-        
+      - name: unit tests
+        run: mvn -B test --file pom.xml
       - name: build the application 
         run: |
           mvn clean
