@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: spring-build-deploy
+  cancel-in-progress: true
+
 jobs: 
   build: 
     name: build & deploy spring ap
