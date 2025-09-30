@@ -8,7 +8,7 @@ on:
 jobs: 
   build: 
     name: build & deploy spring ap
-    runs-on: ubuntu-latest
+    runs-on: ubuntu latest
     steps:
     - name: checkout code
       uses: actions/checkout@v3
@@ -40,7 +40,7 @@ jobs:
         password: ${{secrets.DOCKERHUB_ACCESS_TOKEN}}
 
     - name: push image to docker hub
-      uses: docker/build-push-actions@v2
+      uses: docker/build-push-action@v2
       with: 
         context: .
         dockerfile: dockerfile
