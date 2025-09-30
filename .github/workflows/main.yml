@@ -22,7 +22,7 @@ jobs:
       run: mvn -B --file pom.xml
 
     - name: build the application
-      run: |
+      run: mvn -B --file pom.xml clean package -DskipTests
 
     - name: build docker image
       uses: docker/build-push-action@v3
