@@ -26,12 +26,12 @@ jobs:
       run: |
 
     - name: build docker image
-      uses: actions/build-push-actions@v3
+      uses: docker/build-push-action@v3
       with: 
-        cotext: .
+        context: .
         dockerfile: dockerfile
         push: false
-        tags: ${{secrets.DOCKERHUB_ACCESS_TOKEN}}/spring-app:latest 
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/spring-app:latest 
   
     - name: login to docker hub
       uses: docker/login-action@v1
