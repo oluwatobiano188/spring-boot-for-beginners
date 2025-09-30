@@ -4,15 +4,10 @@ on:
   push:
     branches:
       - main
-
-concurrency:
-  group: spring-build-deploy
-  cancel-in-progress: true
-
 jobs: 
   build: 
-    name: build & deploy spring ap
-    runs-on: ubuntu latest
+    name: build & deploy spring app
+    runs-on: ubuntu-latest
     steps:
     - name: checkout code
       uses: actions/checkout@v3
